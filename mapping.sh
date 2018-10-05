@@ -6,9 +6,9 @@
 # The script invokes TAD_format.pl (see doc). Once genes are extracted, the 
 # script formats them in EnsEMBL format to be passed to BioMart. 
 
-./TAD_format.pl $1 $2 			 	| \
-./EnsEMBL_format.pl   			 	| \
+./tad_format.pl $1 $2 			 	| \
+./ensembl_format.pl   			 	| \
 sort -buk1,1          			 	| \ # sort unique EnsEMBL IDs
-./EnsEMBL_retrieve.R  			 	| \
-./FASTA_format.pl	  			 	| \
-./FASTA_format_remove_duplicates.pl
+./ensembl_retrieve.R  			 	| \
+./fasta_format.pl	  			| \
+./fasta_format_remove_duplicates.pl
