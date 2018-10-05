@@ -8,7 +8,11 @@ it has been hypothesized they function in transcription regulation.
 script will first take your predefined TAD (chromosome #, start index, end 
 index), will extract genes (chromosome #, start index, end index, EnsEMBL ID, 
 description) that fit into the TAD region, pull them from BioMart, and format
-them into FASTA. 
+them into FASTA.
+
+Note, chromosome location mapping occurs 1000 nucleotides upstream and 50 
+nucleotides downstream for potential promoter identification using Clover and 
+MEME-ChIP.
 
 ## Usage
 Requirement: 
